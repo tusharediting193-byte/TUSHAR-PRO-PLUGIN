@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TUSHAR PRO ADMIN</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<div id="loginView" class="login-shell">
+  <div class="login-card">
+    <div class="brand-mark">TP</div>
+    <div class="eyebrow">CONTROL CENTER</div>
+    <h1>TUSHAR <span>PRO</span></h1>
+    <p class="muted">Administrator sign in</p>
+    <form id="loginForm">
+      <label>Email</label><input id="email" type="email" autocomplete="username" required placeholder="admin@example.com">
+      <label>Password</label><input id="password" type="password" autocomplete="current-password" required placeholder="Your password">
+      <button class="primary" type="submit">Sign in securely</button>
+      <p id="loginMessage" class="message"></p>
+    </form>
+    <p class="footnote">Private administrator access · TUSHAR PRO PLUGIN</p>
+  </div>
+</div>
+
+<div id="appView" class="app hidden">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark small">TP</div><div><b>TUSHAR <span>PRO</span></b><small>ADMIN CONSOLE</small></div></div>
+    <nav id="nav">
+      <button class="nav-item active" data-page="overview">▦ <span>Overview</span></button>
+      <button class="nav-item" data-page="users">♙ <span>Users</span></button>
+      <button class="nav-item" data-page="licenses">◇ <span>Licenses</span></button>
+      <button class="nav-item" data-page="devices">▣ <span>Devices</span></button>
+      <button class="nav-item" data-page="presets">▤ <span>Preset Library</span></button>
+      <button class="nav-item" data-page="updates">⇧ <span>Plugin Updates</span></button>
+      <button class="nav-item" data-page="announcements">▱ <span>Announcements</span></button>
+      <button class="nav-item" data-page="logs">≡ <span>Activity Logs</span></button>
+    </nav>
+    <div class="sidebar-bottom"><span class="status-dot"></span> Supabase connected</div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div><div class="eyebrow">WORKSPACE / <span id="pageCrumb">OVERVIEW</span></div><h2 id="pageTitle">Dashboard Overview</h2></div>
+      <div class="top-actions"><span id="adminEmail" class="admin-email"></span><button id="refreshBtn" class="ghost">↻ Refresh</button><button id="logoutBtn" class="logout">Sign out</button></div>
+    </header>
+    <section id="notice" class="notice hidden"></section>
+    <section id="content"></section>
+    <footer> TUSHAR PRO ADMIN <span>·</span> Private control center <span>·</span> Beta 0.1</footer>
+  </main>
+</div>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
